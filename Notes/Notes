@@ -1,3 +1,4 @@
+Mainly for mobile devices ->
 <meta name="viewport" content="maximum-width=width=device-width, initial-scale=1.0">
 
 Google jquery CDN
@@ -5,3 +6,6 @@ Google jquery CDN
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
   </script>
 </head>
+
+use <script> to code the js
+- document.getElementById("idName").thing = "thing";
