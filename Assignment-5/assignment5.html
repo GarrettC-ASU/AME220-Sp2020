@@ -1,30 +1,55 @@
 <!doctype html>
 <html>
 <head>
-  </head>
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-<style>
-  img{
-display: block;
-height: 300px;
-  }
-  </style>
-  <body>
-    <img>
-    <button onclick='$("img").attr("src", imgs[0])'> 1 </button>
-    <button onclick='$("img").attr("src", imgs[1])'> 2 </button>
-    <button onclick='$("img").attr("src", imgs[2  ])'> 3 </button>
+  <link href="assignment5.css" rel="stylesheet">
+</head>
+  <center>
+    <div class="slideshow">
+    <div class="mySlides">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Acer_diabolicum_9_%28medium_crop%29.jpg/320px-Acer_diabolicum_9_%28medium_crop%29.jpg" height="200px" width="auto">
+    </div>
 
-    </body>
+    <div class="mySlides">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Delos_Museum_Mosaik_Dionysos_09.jpg/240px-Delos_Museum_Mosaik_Dionysos_09.jpg" height="200px" width="auto">
+    </div>
+
+    <div class="mySlides">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg/800px-CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg" height="200px" width="auto">
+    </div>
+  </div>
+</center>
+  <br>
+  <div style="text-align:center">
+    <span class="button" onclick="currentSlide(1)">1</span>
+    <span class="button" onclick="currentSlide(2)">2</span>
+    <span class="button" onclick="currentSlide(3)">3</span>
+  </div>
     <script>
-      var imgs = [
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Acer_diabolicum_9_%28medium_crop%29.jpg/320px-Acer_diabolicum_9_%28medium_crop%29.jpg",
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Delos_Museum_Mosaik_Dionysos_09.jpg/240px-Delos_Museum_Mosaik_Dionysos_09.jpg",
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg/800px-CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg"
-      ];
-      $("img").attr("src", imgs[0])
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
       </script>
 </html>

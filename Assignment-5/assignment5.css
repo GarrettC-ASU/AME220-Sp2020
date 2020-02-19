@@ -1,0 +1,25 @@
+
+.slideshow{
+  border: solid 2px black;
+  max-width: 350px;
+  max-height: 200px;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.button {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: red;
+}

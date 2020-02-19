@@ -9,3 +9,5 @@ Google jquery CDN
 
 use <script> to code the js
 - document.getElementById("idName").thing = "thing";
+
+use document option in javascript to do assignment5 
