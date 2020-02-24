@@ -12,4 +12,8 @@ use <script> to code the js
 
 use document option in javascript to do assignment5
 
-epoch is Jan 1, 1970 
+epoch is Jan 1, 1970
+
+sorting is comparing pairs
+
+points.sort(function(a, b){return a - b}) - sorts num small to large

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+</head>
+<style>
+  img{
+
+  }
+</style>
+  <body>
+    <img>
+    <button onclick='$("img").attr("src", imgs[0])'> 1 </button>
+    <button onclick='$("img").attr("src", imgs[1])'> 2 </button>
+    <button onclick='$("img").attr("src", imgs[2])'> 3 </button>
+  </body>
+  <script>
+  var imgs = [
+    "https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528__340.jpg",
+    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
+    "https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819__340.jpg"
+  ];
+  $("img").attr("src", imgs[0])
+  </script>
+</html>
